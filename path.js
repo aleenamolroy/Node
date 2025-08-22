@@ -1,4 +1,5 @@
-const path = require('path');
-const file_name= path.basename('C:\\Users\\acer\\Desktop\\Node\\myFile.txt')
+const path=require('path')
+const file_name=path.basename('C:\\Users\\acer\\Desktop\\Node\\myFile.txt')
 console.log(file_name)
-
+const file_name_without_extention=path.basename('C:\\Users\\acer\\Desktop\\Node\\myFile.txt','.txt')
+console.log(file_name_without_extention)
