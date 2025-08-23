@@ -40,6 +40,31 @@ fs.readFile(file,'utf-8',(err,data)=>{
 //delete file
 
 fs.unlink('hello.txt',(err)=>{
-    if(err) throw err;
+    if(err) {
+        console.log(err)
+    }
     console.log("file deleted!")
+})
+
+//state
+
+fs.stat('myFile.txt',(err,stats)=>{
+    if(err) {
+        console.log(err)
+    }
+    console.log('Stat of file:',stats)
+})
+
+//mkdir
+
+fs.mkdir('MyFolder',(err)=>{
+    if(err) console.log(err);
+    console.log("Folder created")
+})
+
+//rmdir
+
+fs.rmdir('MyFolder',(err)=>{
+    if(err) console.log(err);
+    console.log("Folder removed")
 })
