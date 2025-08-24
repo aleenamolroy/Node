@@ -1,0 +1,20 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "my first node.js project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleenamolroy/Node.git"
+  },
+  "author": "aleena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleenamolroy/Node/issues"
+  },
+  "homepage": "https://github.com/aleenamolroy/Node#readme"
+}
