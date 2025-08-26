@@ -1,6 +1,10 @@
 import express from 'express'
 const app=express()
 app.use(express.json())
+app.use((req,res,next)=>{
+    console.log(`${req.method} ${req.url}`)
+    next()
+})
 const port=3000
 app.get('/users',(req,res)=>{
     res.json(users)
@@ -11,7 +15,7 @@ app.post('/users',(req,res)=>{
     const {name}=req.body
     const id=users.length>0?Math.max(...users.map(user=>user.id))+1:1
     const newUser= users.push({id:id,name:name})
-    res.status(204).send(newUser)
+    res.status(201).send(newUser)
 })
 app.put('/users/:id',(req,res)=>{
     const userId = parseInt(req.params.id)
